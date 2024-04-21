@@ -1,0 +1,18 @@
+services:
+  cuda-devcontainer:
+    image: pytorch/pytorch:2.2.1-cuda12.1-cudnn8-runtime
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            device_ids: ['1', '2']
+            capabilities: [gpu]
+    volumes:
+      - self-defeating-improvements:/workspace
+    stdin_open: true
+    tty: true
+    ipc: host
+
+volumes:
+  self-defeating-improvements:
