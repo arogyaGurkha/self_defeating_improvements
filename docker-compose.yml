@@ -1,6 +1,6 @@
 services:
   cuda-devcontainer:
-    image: pytorch/pytorch:2.2.1-cuda12.1-cudnn8-runtime
+    image: pytorch/pytorch:1.9.0-cuda11.1-cudnn8-runtime
     deploy:
       resources:
         reservations:
